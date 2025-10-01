@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Depot</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="https://unpkg.com/vue@2.7.8/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <div class="container">
+            <header>
+                <h1 v-text="sitename"></h1>
+            </header>
+            <main>
+                <figure>
+                    <!-- bind 'src' attr to 'product.image' in 'data' -->
+                    <img v-bind:src="product.image">
+                </figure>
+                <h2 v-text="product.title"></h2>
+                <p v-html="product.description"></p>
+                <!-- The double curly brackets is used instead of 'v-text' -->
+                <p>Price: {{product.price}}</p>
+            </main>
+        </div>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+</html>

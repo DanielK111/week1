@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO task and Calculator JavaScript</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="app">
+        <h2>ToDo List</h2>
+        <div class="container">
+            <input type="text" id="task-text">
+            <button onclick="addTask()">Add</button>
+            <select id="select" onchange="priority()">
+                <option disabled>Priority</option>
+                <option selected>Highest</option>
+                <option>Lowest</option>
+            </select>
+        </div>
+        <div id="content"></div>
+
+        <hr>
+
+        <h2>Calculator</h2>
+        <label>X: <input id="x" onkeyup="sum()" value="0"></label><br>
+        <label>Y: <input id="y" onkeyup="sum()" value="0"></label><br>
+        <div>Result: <span id="result"></span></div>
+    </div>
+
+    <script src="./scripts.js"></script>
+</body>
+</html>

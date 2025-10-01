@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO task and Calculator Vue.js</title>
+    <script src="https://unpkg.com/vue@2.7.8/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <h2>ToDo List</h2>
+        <input type="text" v-model="newTask">
+        <button @click="addTask">Add</button> <!--v-on:click="addItem"-->
+
+        <ul id="taskList">
+            <li>task1</li>
+            <li>task2</li>
+            <li v-for="task in tasks" :key="task.id">{{ task.task }}</li>
+        </ul>
+
+        <hr>
+
+        <h2>Calculator</h2>
+        <label>X: <input v-model="x"></label><br>
+        <label>Y: <input v-model="y"></label><br>
+        <div>Result: {{ result }}</div>
+    </div>
+
+    <script src="./scripts.js"></script>
+</body>
+</html>
