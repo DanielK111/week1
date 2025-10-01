@@ -26,7 +26,7 @@ function renderTask() {
     
     tasks.forEach(task => {
         const li = document.createElement('li');
-        li.innerText = tasks;
+        li.innerText = task;
         list.appendChild(li);
     });
     contentDiv.appendChild(list);
